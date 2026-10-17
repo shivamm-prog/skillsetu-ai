@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-main: #F7F4EC;
+    --bg-card: #FFFFFF;
+    --bg-card-subtle: #FAF7F0;
+    --border-color: #E8E2D2;
+    --accent-gold: #CA9A36;
+    --sidebar-bg: #14161C;
+    --sidebar-hover: #1E212A;
+    --sidebar-active: #CA9A36;
+  }
+
+  .dark {
+    --bg-main: #0F1116;
+    --bg-card: #171A21;
+    --bg-card-subtle: #1C2029;
+    --border-color: #272C38;
+    --accent-gold: #DBB565;
+    --sidebar-bg: #0C0D11;
+    --sidebar-hover: #181B23;
+    --sidebar-active: #CA9A36;
+  }
+
+  * {
+    border-color: var(--border-color);
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    margin: 0;
+    min-height: 100vh;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 140, 120, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 140, 120, 0.4);
+}
+
+/* Subtle glass and animations */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+}
+.dark .glass-panel {
+  background: rgba(23, 26, 33, 0.85);
+  backdrop-filter: blur(12px);
+}
